@@ -1,0 +1,17 @@
+{
+  "name": "apartment_lab",
+  "version": "0.0.1",
+  "description": "a lab for playing with constructors and prototypes in JS",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -R spec spec/test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^1.9.1"
+  }
+}
