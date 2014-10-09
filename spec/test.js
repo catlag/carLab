@@ -9,7 +9,7 @@ var date = new Date();
 describe('Car', function(){
 
   beforeEach(function(){
-    car1 = new Car("ford", "escape", 2014, "grey");
+    car1 = new Car("ford", "escape", 2014, "grey", "nowhere");
   });
     // create a new myCar object each time
 
@@ -22,7 +22,7 @@ describe('Car', function(){
 
   describe('#state', function(){
     it('should initially be off', function(){
-      expect(Car.prototype.state).to.equal("off");
+      expect(car1.state).to.equal("off");
     });
   });
 
@@ -79,7 +79,8 @@ describe('Car', function(){
 describe('#driveTo', function(){
     it('should console.log "driving to <destination> if state is on', function(){
       car1.start();
-      expect(car1.driveTo('reno').driving()).to.eql("driving to Oregon");
+      
+      expect(car1.driveTo("reno")).to.eql("driving to Oregon");
     });
   });
 

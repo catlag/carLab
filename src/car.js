@@ -1,5 +1,5 @@
-function Car(make, model, year, color, passengers, previous_owners, current_owner
-	){
+function Car(make, model, year, color, destination, passengers, previous_owners, 
+	current_owner, state ){
 	this.make = make;
 	this.model = model;
 	this.year = year;
@@ -7,11 +7,10 @@ function Car(make, model, year, color, passengers, previous_owners, current_owne
 	this.passengers = [];
 	this.previous_owners = [];
 	this.current_owner = "manufacturer";
+	this.state = "off";
+	this.destination = destination;
 }
 
-Car.prototype.state = "off";
-
-// Car.prototype.passengers = [];
 
 Car.prototype.sale = function(newOwner){
 	this.previous_owners.push(this.current_owner);
@@ -38,16 +37,14 @@ if (this.state === "on") {
 }
 };
 
-Car.prototype.driveTo = function(destination) {
-	this.destination = destination;
-	this.driving = function() {
+Car.prototype.driveTo = function(place) {
+	console.log(car1.destination);
 	if (this.state === "on") {
+	this.destination = place;
 	console.log("driving to " + this.destination); 
 	}
 };
 
-
-};
 Car.prototype.park = function(){
 	if (this.state === "off") {
 		console.log("parked");
