@@ -1,19 +1,22 @@
-function Car(make, model, year, color){
+function Car(make, model, year, color, passengers, previous_owners, current_owner
+	){
 	this.make = make;
 	this.model = model;
 	this.year = year;
 	this.color = color;
+	this.passengers = [];
+	this.previous_owners = [];
+	this.current_owner = "manufacturer";
 }
 
 Car.prototype.state = "off";
-Car.prototype.previous_owners = [];
-Car.prototype.current_owner = "manufacturer";
-Car.prototype.passengers = [];
+
+// Car.prototype.passengers = [];
 
 Car.prototype.sale = function(newOwner){
 	this.previous_owners.push(this.current_owner);
 	this.current_owner = newOwner;
-	return Car.prototype.current_owner;
+	return this.current_owner;
 };
 
 Car.prototype.paint = function(newColor){

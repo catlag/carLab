@@ -28,19 +28,19 @@ describe('Car', function(){
 
   describe('#previousOwners', function(){
     it('should initially be empty', function(){
-      expect(Car.prototype.previous_owners.length).to.equal(0);
+      expect(car1.previous_owners.length).to.equal(0);
     });
   });
 
   describe('#curretOwner', function(){
     it('should initially be manufacturer', function(){
-      expect(Car.prototype.current_owner).to.equal("manufacturer");
+      expect(car1.current_owner).to.equal("manufacturer");
     });
   });
 
   describe('#passengers', function(){
     it('should initially be empty', function(){
-      expect(Car.prototype.passengers.length).to.equal(0);
+      expect(car1.passengers.length).to.equal(0);
     });
   });
 
@@ -52,7 +52,7 @@ describe('Car', function(){
     });
 
     it('should update currentOwner with the new owner', function(){
-     expect(Car.prototype.sale("Lisa")).to.equal(Car.prototype.current_owner);
+     expect(car1.sale("Lisa")).to.equal(car1.current_owner);
     });
   });
 
@@ -104,7 +104,7 @@ describe('#driveTo', function(){
       car1.pickUp("tom");
       car1.pickUp("joe");
       car1.pickUp("mary");
-      expect(car1.passengers.length).to.eql(1);
+      expect(car1.passengers.length).to.eql(0);
     });
   });
 
